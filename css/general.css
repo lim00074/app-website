@@ -27,10 +27,10 @@ header {
 	background-color: #000;
 	position: fixed;
 	width: 100%;
+	z-index: 1000;
 }
 
 .main {
-
 }
 
 .article,
@@ -81,63 +81,6 @@ footer {
 	}
 }
 
-/*=========GENERAL STYLING=========*/
-
-img {
-	width: 100%;
-}
-
-.logo {
-	width: 50px;
-}
-
-.video {
-	margin-top: 74px;
-}
-
-button {
-	padding: 1.25em 4em;
-	margin-top: 1em;
-	border: none;
-	width: 100%;
-	font-size: 1em;
-	background-color: #ccc;
-}
-
-button:hover,
-button:focus,
-button:active {
-	background-color: #999;
-}
-
-@media only screen and (min-width: 30em) {
-	button {
-		width: 230px;
-	}
-}
-
-/*@media only screen and (min-width: 67.5em) {
-	.video {
-		position: absolute;
-		overflow: hidden;
-		right: 0;
-		left: 0;
-		margin-right: auto;
-		margin-left: auto;
-		width: 1060px;
-	}
-}*/
-
-@media only screen and (min-width: 100em) {
-	.logo {
-		width: 80px;
-	}
-
-	button {
-		width: 500px;
-	}
-}
-
 /*=========HEADING STYLES=========*/
 h1,
 h2 {
@@ -156,10 +99,16 @@ h2 {
 	margin: 8px;
 }
 
+a,
+a:link,
+a:visited {
+	text-decoration: none;
+}
 
 /*========NAVIGATION=========*/
 nav {
-	z-index: 100;
+	position: absolute;
+	top: 0;
 }
 
 .nav {
@@ -167,8 +116,6 @@ nav {
 	background-color: #000;
 
 	font-size: 1rem;
-
-
 }
 
 .nav-btn {
@@ -193,7 +140,6 @@ nav {
 	display: block;
 	padding: 1em;
 	color: #fff;
-	text-decoration: none;
 }
 
 .nav a:hover,
@@ -225,7 +171,6 @@ nav {
 	}
 
 	nav {
-		position: absolute;
 		width: 450px;
 		top: -0.3em;
 		right: 0;
@@ -236,6 +181,132 @@ nav {
 	nav {
 		width: 700px;
 	}
+}
+
+/*=========GENERAL STYLING=========*/
+
+img {
+	width: 100%;
+}
+
+.logo {
+	width: 50px;
+}
+
+.video {
+	margin-top: 74px;
+}
+
+.btn-buy {
+	display: block;
+	text-align: center;
+	padding: 1.25em 4em;
+	width: 100%;
+	font-size: 1em;
+	color: #000;
+	background-color: #ccc;
+}
+
+.btn-buy:hover,
+.btn-buy:focus,
+.btn-buy:active {
+	background-color: #999;
+}
+
+@media only screen and (min-width: 30em) {
+	.btn-buy {
+		width: 230px;
+	}
+}
+
+@media only screen and (min-width: 60em) {
+	.video {
+		width: 70%;
+		padding-top: 74px;
+		margin: 0 15%;
+	}
+}
+
+@media only screen and (min-width: 100em) {
+	.logo {
+		width: 80px;
+	}
+
+	.btn-buy {
+		width: 500px;
+	}
+}
+
+/*========CAROUSEL=======*/
+.carousel {
+	padding-bottom: 201.64%;
+	position: relative;
+	z-index: 0;
+	width: 100%;
+	display: block;
+}
+
+.carousel-items img {
+	position: absolute;
+	top: 1em;
+	left: 0;
+	width: 100%;
+	z-index: 0;
+}
+
+.carousel-items [data-state="current"] {
+	z-index: 10;
+}
+
+.carousel-items [data-state="incoming"] {
+	z-index: 11;
+}
+
+.carousel-buttons {
+	position: absolute;
+	z-index: 50;
+	margin-left: 1.5em;
+	margin-top: 0.5em;
+}
+
+.carousel-buttons2 {
+	display: none;
+}
+
+.carousel-desc {
+	display: block;
+	width: 100%;
+	float: none;
+}
+
+@media only screen and (min-width: 30em) {
+	.carousel,
+	.carousel-desc {
+		display: inline-block;
+		width: 50%;
+	}
+
+	.carousel {
+		padding-bottom: 100.82%;
+		float: left;
+	}
+
+	.carousel-buttons {
+		display: none;
+	}
+
+	.carousel-buttons2 {
+		display: inherit;
+	}
+
+	.carousel-desc {
+		margin-top: 7em;
+		float: right;
+	}
+
+	.screen-shots {
+		width: 80%;
+		margin: auto auto;
 }
 
 /*========CLEARFIX=======*/
