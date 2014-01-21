@@ -1,0 +1,255 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*=========SECTIONS=========*/
+
+html {
+	font-size: 100%;
+	font-family: "Helvetica", "Arial", sans-serif;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #000;
+	position: fixed;
+	width: 100%;
+}
+
+.main {
+
+}
+
+.article,
+header {
+	padding: 10px;
+}
+
+.border-bottom {
+	border-bottom: solid thin #999;
+	padding-bottom: 3em;
+}
+
+.shift-up {
+	margin-top: -3em;
+}
+
+.spacer {
+	padding-top: 6em;
+}
+
+footer {
+	font-size: 0.75rem;
+	color: #fff;
+	background-color: #000;
+	margin-top: 2em;
+	padding: 20px 10px;
+	text-align: center;
+}
+
+
+@media only screen and (min-width: 60em) {
+	.article {
+		margin: 0 10%;
+	}
+
+	.border-bottom {
+		padding-bottom: 4em;
+	}
+
+	.shift-up {
+		margin-top: -3em;
+	}
+}
+
+@media only screen and (min-width: 100em) {
+	html {
+		font-size: 150%;
+	}
+}
+
+/*=========GENERAL STYLING=========*/
+
+img {
+	width: 100%;
+}
+
+.logo {
+	width: 50px;
+}
+
+.video {
+	margin-top: 74px;
+}
+
+button {
+	padding: 1.25em 4em;
+	margin-top: 1em;
+	border: none;
+	width: 100%;
+	font-size: 1em;
+	background-color: #ccc;
+}
+
+button:hover,
+button:focus,
+button:active {
+	background-color: #999;
+}
+
+@media only screen and (min-width: 30em) {
+	button {
+		width: 230px;
+	}
+}
+
+/*@media only screen and (min-width: 67.5em) {
+	.video {
+		position: absolute;
+		overflow: hidden;
+		right: 0;
+		left: 0;
+		margin-right: auto;
+		margin-left: auto;
+		width: 1060px;
+	}
+}*/
+
+@media only screen and (min-width: 100em) {
+	.logo {
+		width: 80px;
+	}
+
+	button {
+		width: 500px;
+	}
+}
+
+/*=========HEADING STYLES=========*/
+h1,
+h2 {
+	font-weight: normal;
+}
+
+h1 {
+	display: inline;
+	font-size: 1.5rem;
+	position: absolute;
+	top: -5rem;
+}
+
+h2 {
+	font-size: 1.25rem;
+	margin: 8px;
+}
+
+
+/*========NAVIGATION=========*/
+nav {
+	z-index: 100;
+}
+
+.nav {
+	padding-top: 1em;
+	background-color: #000;
+
+	font-size: 1rem;
+
+
+}
+
+.nav-btn {
+	display: inline-block;
+	float: right;
+	text-decoration: none;
+	color: #fff;
+	padding: 17px;
+	background-color: #333;
+}
+
+.nav ul {
+	margin: 0;
+	padding: 0;
+
+	list-style-type: none;
+}
+
+.nav a,
+.nav a:link,
+.nav a:visited {
+	display: block;
+	padding: 1em;
+	color: #fff;
+	text-decoration: none;
+}
+
+.nav a:hover,
+.nav a:focus, /*activates when tabbed with keyboard*/
+.nav a:active { /*on click*/
+	background-color: #333;
+}
+
+/*========JAVA SCRIPT NAV=======*/
+.nav[data-state="closed"] {
+	display: none;
+}
+
+.nav[data-state="open"] {
+	display: block;
+}
+
+@media only screen and (min-width: 34em) {
+	.nav-btn {
+		display: none;
+	}
+
+	.nav[data-state="closed"] {
+		display: inline-block;
+	}
+
+	nav li {
+		display: inline-block;
+	}
+
+	nav {
+		position: absolute;
+		width: 450px;
+		top: -0.3em;
+		right: 0;
+	}
+}
+
+@media only screen and (min-width: 100em) {
+	nav {
+		width: 700px;
+	}
+}
+
+/*========CLEARFIX=======*/
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both; /* the wrapper must go clear around the clearfix */
+}
+
+.clearfix {
+	*zoom: 1;
+}
