@@ -30,16 +30,35 @@
 			<div class="border-bottom">
 				<div class="article">
 					<p>App description lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mattis lorem vel dolor scelerisque, a volutpat mauris sagittis. Mauris adipiscing.</p>
-					<button>Buy Now</button>
+					<a href="#" class="btn-buy">Buy Now</a>
 				</div>
 			</div>
 		</article>
 
 		<div><a id="Screen-Shots"></a></div>
-		<article class="spacer border-bottom shift-up">
+		<article class="spacer border-bottom shift-up clearfix">
 			<div class="article">
 				<h2>Screen Shots</h2>
-				<img src="http://placehold.it/1920x1080" alt="">
+				<div class="screen-shots">
+					<div class="carousel">
+						<div class="carousel-items">
+							<img data-state="current" src="img/airport_app-00.jpg" alt="Airport App: Begin a New Trip">
+							<img src="img/airport_app-01.jpg" alt="Airport App: Map">
+							<img src="img/airport_app-02.jpg" alt="Airport App: Directory">
+						</div>
+						<div class="carousel-buttons">
+							<button class="previous">Previous</button>
+							<button class="next">Next</button>
+						</div>
+					</div>
+					<div class="carousel-desc">
+						<div class="carousel-buttons2">
+							<button class="previous">Previous</button>
+							<button class="next">Next</button>
+						</div>
+						<p>App description lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce mattis lorem vel dolor scelerisque, a volutpat mauris sagittis. Mauris adipiscing.</p>
+					</div>
+				</div>
 			</div>
 		</article>
 
@@ -65,6 +84,7 @@
 			<p>© 2014 Airport Assistant. All rights reserved.
 		</footer>
 
+	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>
