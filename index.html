@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Airport Assistant App</title>
+	<link rel="stylesheet" href="css/dialog-polyfill.css">
 	<link rel="stylesheet" href="css/general.css">
 </head>
 <body>
@@ -10,9 +11,11 @@
 
 
 	<header>
-		<a href="index.html"><img class="logo" src="img/airport_app-icon.png" alt="Airport Assistant App"></a>
-		<h1>Airport Assistant</h1>
-		<a href="#nav" class="nav-btn">Menu</a>
+		<div class="header">
+			<a href="index.html"><img class="logo" src="img/airport_app-icon.png" alt="Airport Assistant App"></a>
+			<h1>Airport Assistant</h1>
+			<a href="#nav" class="nav-btn">Menu</a>
+		</div>
 		<nav class="nav nav-top" data-state="closed">
 			<ul>
 				<li><a href="index.html">Home</a></li>
@@ -25,7 +28,13 @@
 
 	<main class="main">
 
-		<img class="video" src="http://placehold.it/1920x1080" alt="Airport Assistant Video">
+		<img class="placeholder" src="http://placehold.it/1920x1080" alt="Airport Assistant Video">
+		<div class="video">
+			<dialog id="video">
+				<button id="btn-close">×</button>
+				<div id="video-placeholder"></div>
+			</dialog>
+		</div>
 		<article>
 			<div class="border-bottom">
 				<div class="article">
@@ -36,7 +45,7 @@
 		</article>
 
 		<div><a id="Screen-Shots"></a></div>
-		<article class="spacer border-bottom shift-up clearfix">
+		<article class="spacer border-bottom shift-up clearfix article-background2">
 			<div class="article">
 				<h2>Screen Shots</h2>
 				<div class="screen-shots">
@@ -63,7 +72,7 @@
 		</article>
 
 		<div><a id="Features"></a></div>
-		<article class="spacer border-bottom shift-up">
+		<article class="spacer border-bottom shift-up article-background1">
 			<div class="article">
 				<h2>Features</h2>
 				<img src="http://placehold.it/1920x1080" alt="">
@@ -85,6 +94,7 @@
 		</footer>
 
 	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src="js/dialog-polyfill.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>
