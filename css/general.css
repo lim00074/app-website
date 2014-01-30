@@ -4,17 +4,18 @@
 @-webkit-viewport { width: device-width; scale: 1; }
 @viewport { width: device-width; scale: 1; }
 
-* {
+/** {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-}
+}*/
 
 /*=========SECTIONS=========*/
 
 html {
 	font-size: 100%;
 	font-family: "Helvetica", "Arial", sans-serif;
+	background-color: #f0f;
 }
 
 html,
@@ -34,8 +35,16 @@ header {
 }
 
 .article,
-header {
+.header {
 	padding: 10px;
+}
+
+.article-background1 {
+	background-color: #ff0;
+}
+
+.article-background2 {
+	background-color: #fff;
 }
 
 .border-bottom {
@@ -106,16 +115,16 @@ a:visited {
 }
 
 /*========NAVIGATION=========*/
+
 nav {
 	position: absolute;
 	top: 0;
 }
 
 .nav {
-	padding-top: 1em;
 	background-color: #000;
-
 	font-size: 1rem;
+	padding-top: 1em;
 }
 
 .nav-btn {
@@ -123,8 +132,17 @@ nav {
 	float: right;
 	text-decoration: none;
 	color: #fff;
-	padding: 17px;
 	background-color: #333;
+}
+
+.nav-btn,
+.nav a,
+.nav a:link,
+.nav a:visited,
+.nav a:hover,
+.nav a:focus,
+.nav a:active {
+	padding: 17px;
 }
 
 .nav ul {
@@ -138,7 +156,6 @@ nav {
 .nav a:link,
 .nav a:visited {
 	display: block;
-	padding: 1em;
 	color: #fff;
 }
 
@@ -193,10 +210,6 @@ img {
 	width: 50px;
 }
 
-.video {
-	margin-top: 74px;
-}
-
 .btn-buy {
 	display: block;
 	text-align: center;
@@ -205,6 +218,9 @@ img {
 	font-size: 1em;
 	color: #000;
 	background-color: #ccc;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .btn-buy:hover,
@@ -219,14 +235,6 @@ img {
 	}
 }
 
-@media only screen and (min-width: 60em) {
-	.video {
-		width: 70%;
-		padding-top: 74px;
-		margin: 0 15%;
-	}
-}
-
 @media only screen and (min-width: 100em) {
 	.logo {
 		width: 80px;
@@ -237,6 +245,62 @@ img {
 	}
 }
 
+/*========VIDEO========*/
+
+
+.placeholder {
+	margin-top: 74px;
+	cursor: pointer;
+}
+
+.video {
+	display: block;
+	position: relative;
+	top: 400px;
+	background-color: #0f0;
+	z-index: 1001;
+}
+
+dialog {
+	border: 2px solid #000;
+	border-radius: 8px;
+	box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+}
+
+dialog::backdrop {
+	background-color: rgba(0,0,0,1);
+}
+
+dialog + .backdrop {
+	background-color: rgba(0,0,0,1);
+}
+
+#btn-close {
+	width: 32px;
+	height: 32px;
+	border-radius: 16px;
+	text-align: center;
+	line-height: 24px;
+	border: 2px solid #fff;
+	background-color: #000;
+	color: #fff;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+	padding: 0;
+	font-weight: bold;
+	cursor: pointer;
+	position: absolute;
+	top: -16px;
+	right: -16px;
+}
+
+@media only screen and (min-width: 60em) {
+	.placeholder {
+		width: 70%;
+		padding-top: 74px;
+		margin: 0 15%;
+	}
+}
+
 /*========CAROUSEL=======*/
 .carousel {
 	padding-bottom: 201.64%;
@@ -244,11 +308,17 @@ img {
 	z-index: 0;
 	width: 100%;
 	display: block;
+	margin-top: 1em;
+}
+
+article,
+.carousel {
+	margin-bottom: 2em;
 }
 
 .carousel-items img {
 	position: absolute;
-	top: 1em;
+	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: 0;
