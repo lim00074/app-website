@@ -76,3 +76,11 @@ $('.previous').on('click', function () {
 
 	switchItems(current, previous);
 });
+
+//LOGO ANIMATION
+var $win = $(window);
+var $plane = $('.plane');
+
+$win.on('scroll', function () {
+	$plane.css('transform', 'rotate('+ $win.scrollTop()/5 +'deg)');
+});
