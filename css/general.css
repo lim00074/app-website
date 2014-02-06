@@ -426,10 +426,27 @@ img {
 	z-index: 1001;
 }
 
+.embed {
+	position: relative;
+}
+
+.embed--16by9 {
+	padding-top: 56.25%; /* divide dimensions to calculate, so 9/16*/
+}
+
+.embed__item {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
 dialog {
 	border: 2px solid #000;
 	border-radius: 8px;
 	box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+	width: 80%;
 }
 
 dialog::backdrop {
